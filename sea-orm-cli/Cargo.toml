@@ -65,3 +65,11 @@ runtime-tokio-rustls = [
     "sqlx/runtime-tokio-rustls",
     "sea-schema/runtime-tokio-rustls",
 ]
+
+[package.metadata.binstall]
+pkg-url = "{ repo }/releases/download/{ version }/{ name }-{ version }-{ target }.{ archive-format }"
+bin-dir = "{ name }-{ target }-v{ version }/{ bin }{ binary-ext }"
+pkg-fmt = "tgz"
+
+[package.metadata.binstall.overrides.x86_64-pc-windows-msvc]
+pkg-fmt = "zip"
